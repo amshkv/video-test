@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+      background: #f3f6f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .card {
+      display: block;
+      width: 400px;
+      height: 225px;
+      background: rgba(0, 0, 0, .3);
+      position: relative;
+    }
+
+    video {
+      width: 400px;
+      height: 225px;
+    }
+
+    .card span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      color: #fff;
+      background: rgba(0, 0, 0, .3);
+      transition: all .3s ease-in-out;
+      opacity: 0;
+    }
+
+    .card:hover span {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1> Просто видео с ютуба</h1>
+
+    <iframe width="400" height="250" src="https://www.youtube.com/embed/auxu8uw0KeQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    <h1>Видео в беграунд</h1>
+    <a href="" class="card">
+      <video autoplay muted loop id="myVideo">
+        <source src="Tender S.mp4" type="video/mp4 ">
+      </video>
+      <span>Перейти на сайт</span>
+    </a>
+    <h1>Стандартное видео со своего хостинга с управлением</h1>
+    <video width="320" height="240" controls>
+      <source src="Tender S.mp4" type="video/mp4"> Your browser does not support the video tag.
+    </video>
+  </div>
+</body>
+
+</html>
